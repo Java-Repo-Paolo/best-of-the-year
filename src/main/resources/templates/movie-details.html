@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Movie Details</title>
-</head>
+<head th:insert="/fragments/resources :: headResources('Movie Details')"></head>
 <body>
     <div class="container">
         <h1>Movie details</h1>
@@ -17,5 +14,6 @@
             Unable to find song
         </div>
     </div>
+    <th:block th:replace="/fragments/resources :: jsResources"></th:block>
 </body>
 </html>

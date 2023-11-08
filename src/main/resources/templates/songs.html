@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Songs</title>
-</head>
+<head th:insert="/fragments/resources :: headResources('Songs List')"></head>
 
 <body>
     <h1>List of Songs</h1>
@@ -16,5 +13,6 @@
     </ul>
     <div th:unless="${songList.size() > 0}">No results</div>
     <a href="/homepage">Return to home</a>
+<th:block th:replace="/fragments/resources :: jsResources"></th:block>
 </body>
 </html>

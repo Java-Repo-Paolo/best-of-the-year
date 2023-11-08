@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Movie Details</title>
-</head>
+<head th:insert="/fragments/resources :: headResources('Song Details')"></head>
 <body>
-<div class="container">
-    <h1>Song details</h1>
-    <div th:if="${song != null}">
-        <p th:text="|Id: ${song.id}|"></p>
-        <p th:text="|Name: ${song.title}|"></p>
-        <p th:text="|Author: ${song.author}|"></p>
-        <p th:text="|Description: ${song.description}|"></p>
+    <div class="container">
+        <h1>Song details</h1>
+        <div th:if="${song != null}">
+            <p th:text="|Id: ${song.id}|"></p>
+            <p th:text="|Name: ${song.title}|"></p>
+            <p th:text="|Author: ${song.author}|"></p>
+            <p th:text="|Description: ${song.description}|"></p>
+        </div>
+        <div th:if="${song == null}">
+            Unable to find song
+        </div>
     </div>
-    <div th:if="${song == null}">
-        Unable to find song
-    </div>
-</div>
+<th:block th:replace="/fragments/resources :: jsResources"></th:block>
 </body>
 </html>
