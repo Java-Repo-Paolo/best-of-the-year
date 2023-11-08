@@ -32,9 +32,28 @@ public class SongsController {
     // METODI PRIVATE
     private List<Song> getBestSongs(){
         Song[] songsArray = {
-                new Song(1, "Without You"),
-                new Song(2, "The End"),
-                new Song(3, "The Resistance")};
+            new Song(
+                    1,
+                    "Without You",
+                    "Avicii",
+                    "Without You è un singolo del DJ svedese Avicii, pubblicato l'11 agosto 2017 " +
+                              "come primo estratto dal terzo EP Avīci (01)."
+            ),
+            new Song(
+                    2,
+                    "The End",
+                    "Linkin Park",
+                    "In the End è un singolo del gruppo musicale statunitense Linkin Park, " +
+                              "pubblicato l'11 settembre 2001 come quarto estratto dal primo " +
+                              "album in studio Hybrid Theory"
+            ),
+            new Song(
+                    3,
+                    "The Resistance",
+                    "Skillet",
+                    "singolo degli Skillet del 2016 dell'album Unleashed"
+            )
+        };
         return Arrays.asList(songsArray);
     }
 

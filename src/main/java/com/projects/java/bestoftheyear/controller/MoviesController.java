@@ -36,7 +36,8 @@ public class MoviesController {
                       "Matrix",
                       "Lana Wachowski, Lilly Wachowski",
                       "Matrix (The Matrix) è un film di fantascienza del 1999 in stile cyberpunk " +
-                                "scritto e diretto dai fratelli Andy e Larry Wachowski."),
+                                "scritto e diretto dai fratelli Andy e Larry Wachowski."
+            ),
             new Movie(
                       2,
                       "Terminator",
@@ -46,7 +47,8 @@ public class MoviesController {
                                 "inviato indietro nel tempo dal 2029 al 1984 per uccidere Sarah Connor " +
                                 "(Linda Hamilton), il cui figlio un giorno diventerà un salvatore contro le macchine " +
                                 "in un futuro postapocalittico. Michael Biehn interpreta Kyle Reese, un soldato del " +
-                                "futuro inviato anch'egli indietro nel tempo per proteggere Sarah."),
+                                "futuro inviato anch'egli indietro nel tempo per proteggere Sarah."
+            ),
             new Movie(
                       3,
                       "Lo Hobbit",
@@ -57,7 +59,9 @@ public class MoviesController {
                                 "Appendici de Il ritorno del re, ultimo libro della saga del Il Signore degli  " +
                                 "Anelli e da altri scritti. La trilogia è un prequel della trilogia del " +
                                 "Il Signore degli Anelli di Jackson, ed è formata da Un viaggio inaspettato (2012), " +
-                                "La desolazione di Smaug (2013) e La battaglia delle cinque armate (2014).")};
+                                "La desolazione di Smaug (2013) e La battaglia delle cinque armate (2014)."
+            )
+        };
         return Arrays.asList(moviesArray);
     }
 
