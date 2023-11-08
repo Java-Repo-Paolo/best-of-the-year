@@ -13,6 +13,7 @@
         <div th:if="${movie == null}">
             Unable to find song
         </div>
+        <a th:href="@{/movies}">Back to movies list</a>
     </div>
     <th:block th:replace="/fragments/resources :: jsResources"></th:block>
 </body>
