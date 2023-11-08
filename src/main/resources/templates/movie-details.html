@@ -6,13 +6,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>Student detail</h1>
+        <h1>Movie details</h1>
         <div th:if="${movie != null}">
             <p th:text="|Id: ${movie.id}|"></p>
             <p th:text="|Name: ${movie.title}|"></p>
+            <p th:text="|Author: ${movie.author}|"></p>
+            <p th:text="|Description: ${movie.description}|"></p>
         </div>
         <div th:if="${movie == null}">
-            Unable to find student
+            Unable to find song
         </div>
     </div>
 </body>
