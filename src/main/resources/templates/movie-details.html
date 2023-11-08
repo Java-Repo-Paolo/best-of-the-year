@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Student detail</h1>
+        <div th:if="${movie != null}">
+            <p th:text="|Id: ${movie.id}|"></p>
+            <p th:text="|Name: ${movie.title}|"></p>
+        </div>
+        <div th:if="${movie == null}">
+            Unable to find student
+        </div>
+    </div>
+</body>
+</html>
