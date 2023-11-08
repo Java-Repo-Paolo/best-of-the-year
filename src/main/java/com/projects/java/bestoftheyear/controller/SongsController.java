@@ -1,10 +1,13 @@
 package com.projects.java.bestoftheyear.controller;
 
+import com.projects.java.bestoftheyear.model.Movie;
+import com.projects.java.bestoftheyear.model.Song;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -13,13 +16,17 @@ public class SongsController {
 
     @GetMapping
     public String songs(Model model){
-        List<String> songs = getBestSongs();
-        String songList = String.join(", ", songs);
+        List<Song> songList = getBestSongs();
         model.addAttribute("songList", songList);
         return "songs";
     }
 
-    private List<String> getBestSongs(){
-        return List.of("Without You", "The End", "The Resistance");
+    // METODI PRIVATE
+    private List<Song> getBestSongs(){
+        Song[] songsArray = {
+                new Song(1, "Without You"),
+                new Song(2, "The End"),
+                new Song(3, "The Resistance")};
+        return Arrays.asList(songsArray);
     }
 }
