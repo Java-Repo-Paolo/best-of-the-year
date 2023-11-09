@@ -23,8 +23,8 @@ public class SongsController {
     }
 
     @GetMapping("/{id}")
-    public String SongDetails(@PathVariable("id") int movieId, Model model) {
-        Song song = getSongById(movieId);
+    public String SongDetails(@PathVariable("id") int songId, Model model) {
+        Song song = getSongById(songId);
         model.addAttribute("song", song);
         return "song-details";
     }
